@@ -1,0 +1,12 @@
+<h1>Organisations</h1>
+<ul>
+    {% for orga in orgas %}
+        <li>{{orga}}
+        	<ul>
+        	{% for user in orga.users %}
+        		<li>{{user}}</li>
+        	{% endfor %}
+        	</ul>
+        </li>
+    {% endfor %}
+</ul>
