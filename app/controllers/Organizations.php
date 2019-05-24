@@ -14,7 +14,7 @@ class Organizations extends ControllerBase{
 	}
 
 	public function display($idOrga){
-		$orga=DAO::getOne(Organization::class, $idOrga);
+		$orga=DAO::getOne(Organization::class, $idOrga,true);
 		$this->loadView('Organizations/display.html',['orga'=>$orga]);
 
 	}
